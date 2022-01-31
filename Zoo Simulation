@@ -1,0 +1,182 @@
+"""
+This create task will be set up like the Bronx Zoo. However, you have a choice
+of language (english, french, italian, and spanish) 
+and after that, a choice of animal you want to learn about.
+**Download code when finished**
+"""
+#Language choice list
+my_lang_list = ['english', 'french', 'italian', 'spanish']
+my_lang_choice = []
+my_animal_choice = []
+#Might also add the translation of the language name as an "or" option
+#Lists containing available animal descriptions
+animal_english = ['Grizzly Bear', 'Lion', 'Caribbean Flamingo', 'Red Panda']
+animal_french = ['Grizzlis', 'Lions', 'Flamants des Caraïbes' , 'Pandas roux']
+animal_italian = ['Orsi grizzly', 'Leoni', 'Fenicotteri dei Caraibi', 'Panda rosso']
+animal_spanish = ['Grizzly', 'Leones', 'Flamencos del Caribe', 'Pandas rojos']
+
+"""This section is for the description portion of the code, and any
+general translations"""
+#English
+bear_eng = "Grizzly Bears (Ursus arctos horribilis): The grizzly bear weighs 300 to 1,500 pounds and can stand up to 8 feet tall. They are able to run quite fast, reaching speeds up to 35 miles per hour. Wild bears are omnivores, and discover their food with their feeling of smell. They like to eat berries, rodents, roots, plant bulbs, cutworm moths, and whitebark pine nuts. Similarly, they also eat mountain sheep and goats, deer, moose, and elk. The wild bear invests a ton of energy looking for food and eating in the pre-fall and late-summer. Currently, Grizzly Bears in the United States are an endangered species that are at risk for extinction, with around 33,000 total in the United States."
+lion_eng = "Lions (Panthera leo): Female lions often weigh anywhere from 240 lbs to 316 lbs, while male lions weigh anywhere from 350 lbs to 496 lbs. They are able to reach high speeds at around 50 miles per hour. Lions spend much of their time resting; they are inactive for about twenty hours per day. They spend an average of two hours a day walking and fifty minutes eating. They usually kill medium sized mammals, and often eat animals which have been killed by another hunter, such as hyenas. Its prey comprises chiefly of blue wildebeest, fields zebra, African bison, gemsbok and giraffe. Currently, lions are listed as “vulnerable” with fears of endangerment increasing."
+flam_eng = 'Caribbean Flamingos (Phoenicopterus ruber): Caribbean Flamingos weigh up to 6 lbs, and stand at almost 5 feet. Their diets consist of small animals, including small shrimp and other crustaceans, mollusks, invertebrates like insects and larvae, and blue-green algae. In their youth, they have a grey coat, but eventually develop a pink/orange color as they grow older. They are mainly found near shallow bodies of water in the Caribbean, and mudflats. Population of the Caribbean Flamingo is anywhere from 850,000 and 880,000. Currently, they are not at risk for endangerment or extinction.'
+panda_eng = 'Red Pandas (Ailurus fulgens): Red Pandas can weigh from 12 to 20 pound during their lifetime. They are omnivores, and their diets consist mostly of bamboo and select fruits and small insects. They reside in Asia (mostly China, Nepal and Myanmar), spending most of their time in trees. Currently, red pandas are endangered, with around 10,000 left in the world.'
+eng_greeting = 'Hello! Welcome to our Zoo.'
+#eng_animal_choice = input("Which animal would you like to learn about today?" )
+
+#French
+bear_fren = 'Grizzlis (Ursus arctos horribilis): Le grizzli pèse de 300 à 1500 livres et peut faire jusqu’à 8 pieds de hauteur. Il est capable de courir assez vite, atteignant des vitesses allant jusqu’à 35 miles à l’heure. Les ours sauvages sont omnivores et découvrent leur nourriture avec leur odorat. Ils aiment manger des baies, des rongeurs, des racines, des bulbes végétaux, des vers gris et des pignons à écorce blanche. De même, ils mangent aussi des moutons et des chèvres de montagne, des cerfs, des orignaux et des wapitis. L’ours sauvage investit une tonne d’énergie à la recherche de nourriture et à manger avant l’automne et à la fin de l’été. À l’heure actuelle, le grizzli aux États-Unis est une espèce menacée d’extinction, avec un total d’environ 33000 espèces aux États-Unis.'
+lion_fren = 'Lions (Panthera leo): Les lions femelles pèsent souvent de 240 lb à 316 lb, tandis que les lions mâles pèsent de 350 lb à 496 lb. Ils peuvent atteindre des vitesses élevées à environ 50 milles à l’heure. Les lions passent une grande partie de leur temps au repos ; ils sont inactifs pendant environ vingt heures par jour. Ils passent en moyenne deux heures par jour à marcher et cinquante minutes à manger. Ils tuent habituellement des mammifères de taille moyenne. Ils mangent souvent des animaux qui ont été tués par un autre chasseur, comme les hyènes. Ses proies sont principalement des gnous bleus, des zèbres des champs, des bisons africains, des gemmboks et des girafes. À l’heure actuelle, les lions sont considérés comme « vulnérables » et les craintes de mise en danger augmentent.'
+flam_fren = 'Flamants des Caraïbes (Phoenicopterus ruber): Flamants des Caraïbes pèsent jusqu’à 6 lbs, et se tiennent à près de 5 pieds. Leur alimentation se compose de petits animaux, notamment de petites crevettes et d’autres crustacés, de mollusques, d’invertébrés comme des insectes et des larves et d’algues bleu-vert. Dans leur jeunesse, ils ont un manteau gris, mais finissent par développer une couleur rose / orange comme ils vieillissent. On les trouve principalement près de plans d’eau peu profonds dans les Caraïbes et de vasières. La population du flamant rose des Caraïbes se situe entre 850 000 et 880 000 habitants. Actuellement, ils ne sont pas menacés de mise en danger ou d’extinction.'
+panda_fren = 'Pandas roux (Ailurus fulgens): Les pandas rouges peuvent peser de 12 à 20 livres au cours de leur vie. Ils sont omnivores, et leur alimentation se compose principalement de bambou et de fruits sélectionnés et de petits insectes. Ils résident en Asie (principalement en Chine, au Népal et au Myanmar), et passent la plupart de leur temps dans les arbres. Actuellement, les pandas rouges sont en voie de disparition, avec environ 10000 restants dans le monde.'
+french_greeting = 'Bonjour ! Bienvenue dans notre zoo. Sur quel animal aimerais-tu apprendre aujourd"hui ?'
+#fren_animal_choice = input("Quel animal souhaitez-vous connaître aujourd'hui? ")
+
+#Italian
+bear_it = 'Orsi grizzly (Ursus arctos horribilis): L orso grizzly pesa da 300 a 1.500 libbre e può essere alto fino a 8 piedi. Sono in grado di correre abbastanza velocemente, raggiungendo velocità fino a 35 miglia all"ora. Gli orsi selvatici sono onnivori e scoprono il loro cibo con l"olfatto. Gli piace mangiare bacche, roditori, radici, bulbi di piante, falene e noci di pino bianco. Allo stesso modo, mangiano anche pecore e capre di montagna, cervi, alci e alci. L"orso selvatico investe una tonnellata di energia per cercare il cibo e mangiare nel periodo pre-autunnale e nella tarda estate. Attualmente, gli orsi Grizzly negli Stati Uniti sono una specie a rischio di estinzione, con circa 33.000 esemplari totali negli Stati Uniti.'
+lion_it = 'Leoni (Panthera leo): I leoni femmina spesso pesano da 240 libbre a 316 libbre, mentre i leoni maschi pesano da 350 libbre a 496 libbre. Sono in grado di raggiungere alte velocità a circa 50 miglia all''ora. I leoni passano molto del loro tempo a riposare; sono inattivi per circa venti ore al giorno. Passano in media due ore al giorno a camminare e cinquanta minuti a mangiare. Di solito uccidono mammiferi di medie dimensioni. Spesso mangiano animali che sono stati uccisi da un altro cacciatore, come le iene. Le sue prede sono principalmente gnu blu, zebra campestre, bisonte africano, gemsbok e giraffa. Attualmente, i leoni sono elencati come "vulnerabili" con timori di pericolo in aumento.'
+flam_it = 'Fenicotteri dei Caraibi (Phoenicopterus ruber): I fenicotteri dei Caraibi pesano fino a 6 libbre, e stanno a quasi 5 piedi. La loro dieta consiste di piccoli animali, tra cui piccoli gamberi e altri crostacei, molluschi, invertebrati come insetti e larve, e alghe blu-verdi. In gioventù, hanno un mantello grigio, ma alla fine sviluppano un colore rosa/arancione quando invecchiano. Si trovano principalmente vicino ai corpi d''acqua poco profondi dei Caraibi e alle distese di fango. La popolazione del fenicottero dei Caraibi è compresa tra 850.000 e 880.000. Attualmente, non sono a rischio di estinzione.'
+panda_it = 'Panda rosso (Ailurus fulgens): I panda rossi possono pesare da 12 a 20 libbre durante la loro vita. Sono onnivori, e la loro dieta consiste principalmente di bambù e frutti selezionati e piccoli insetti. Risiedono in Asia (soprattutto in Cina, Nepal e Myanmar), passando la maggior parte del loro tempo sugli alberi. Attualmente, i panda rossi sono in pericolo, con circa 10.000 rimasti nel mondo.'
+it_greeting = 'Salve! Benvenuto nel nostro zoo. Quale animale vorresti conoscere oggi?'
+#it_animal_choice = input("Quale animale vorresti conoscere oggi? ")
+
+#Spanish
+bear_span = 'Grizzly (Ursus arctos horribilis): El oso pardo pesa de 300 a 1.500 libras y puede soportar hasta 8 pies de altura. Son capaces de correr bastante rápido, alcanzando velocidades de hasta 35 millas por hora. Los osos salvajes son omnívoros y descubren su comida con su olfato. Les gusta comer bayas, roedores, raíces, bulbos de plantas, polillas de la cizaña y piñones de corteza blanca. Del mismo modo, también comen ovejas y cabras de montaña, ciervos, alces y alces. El oso salvaje invierte una tonelada de energía buscando comida y comiendo en el otoño y finales del verano. Actualmente, los osos pardos en los Estados Unidos son una especie en peligro de extinción, con alrededor de 33.000 en total en los Estados Unidos.'
+lion_span = 'Leones (Panthera leo): Las hembras de león suelen pesar entre 240 y 316 libras, mientras que los machos pesan entre 350 y 496 libras. Son capaces de alcanzar altas velocidades, alrededor de 80 kilómetros por hora. Los leones pasan gran parte de su tiempo descansando; están inactivos durante unas veinte horas al día. Pasan una media de dos horas al día caminando y cincuenta minutos comiendo. Suelen matar mamíferos de tamaño medio. Suelen comer animales que han sido matados por otro cazador, como las hienas. Sus presas son principalmente ñus azules, cebras de campo, bisontes africanos, gemsbok y jirafas. En la actualidad, los leones están catalogados como "vulnerables" y se teme que estén en peligro de extinción.'
+flam_span = 'Flamencos del Caribe (Phoenicopterus ruber): Los flamencos caribeños pesan hasta 2,5 kg y miden casi 1,5 m. Su dieta consiste en pequeños animales, como camarones y otros crustáceos, moluscos, invertebrados como insectos y larvas, y algas azul-verdosas. En su juventud, tienen un pelaje gris, pero con el tiempo desarrollan un color rosa/naranja a medida que crecen. Se encuentran principalmente cerca de masas de agua poco profundas en el Caribe, y en marismas. La población del flamenco caribeño oscila entre 850.000 y 880.000 ejemplares. En la actualidad, no están en peligro de extinción.'
+panda_span = 'Pandas rojos (Ailurus fulgens): Los pandas rojos pueden pesar de 12 a 20 libras durante su vida. Son omnívoros y su dieta se compone principalmente de bambú y frutas selectas y pequeños insectos. Residen en Asia (sobre todo en China, Nepal y Myanmar) y pasan la mayor parte del tiempo en los árboles. En la actualidad, los pandas rojos están en peligro de extinción y quedan unos 10.000 ejemplares en el mundo.'
+span_greeting = '¡Hola! Bienvenido a nuestro zoo. ¿Qué animal te gustaría conocer hoy?'
+#span_animal_choice = input("¿Qué animal te gustaría conocer hoy? ")
+
+def choose_language(my_lang_list):
+    print(my_lang_list)
+    lang_ask = input("Which language do you prefer? ").lower()
+    my_lang_choice.append(lang_ask)
+    while True:
+        if lang_ask == "french":
+            print(french_greeting)
+            print(animal_french)
+            break
+        elif lang_ask == "italian":
+            print(it_greeting)
+            print(animal_italian)
+            break
+        elif lang_ask == "spanish":
+            print(span_greeting)
+            print(animal_spanish)
+            break
+        elif lang_ask == "english":
+            print(eng_greeting)
+            print(animal_english)
+            break
+        else:
+            print("Please choose a language from the list.")
+            lang_ask = input("Which language? ")
+        continue
+
+
+def get_info(my_lang_choice):
+    choose_language(my_lang_list)
+    while my_lang_choice[0] == "french":
+        fren_animal_choice = input("Quel animal souhaitez-vous connaître aujourd'hui? ").lower()
+        my_animal_choice.append(fren_animal_choice)
+        if fren_animal_choice == "grizzlis":
+            print(bear_fren)
+            print()
+            print("Merci de visiter notre zoo !")
+            break
+        if fren_animal_choice == "lions":
+            print(lion_fren)
+            print()
+            print("Merci de visiter notre zoo !")
+            break
+        if fren_animal_choice == "flamants des caraibes":
+            print(flam_fren)
+            print()
+            print("Merci de visiter notre zoo !")
+            break
+        if fren_animal_choice == "pandas roux":
+            print(panda_fren)
+            print()
+            print("Merci de visiter notre zoo !")
+            break
+        else:
+          print("Veuillez choisir un animal dans la liste. ")
+    while my_lang_choice[0] == "italian":
+        it_animal_choice = input("Quale animale vorresti conoscere oggi? ").lower()
+        my_animal_choice.append(it_animal_choice)
+        if it_animal_choice == "orsi grizzly":
+            print(bear_it)
+            print()
+            print("Grazie per aver visitato il nostro zoo!")
+            break
+        if it_animal_choice == "leoni":
+            print(lion_it)
+            print()
+            print("Grazie per aver visitato il nostro zoo!")
+            break
+        if it_animal_choice == "fenicotteri dei caraibi":
+            print(flam_it)
+            print()
+            print("Grazie per aver visitato il nostro zoo!")
+            break
+        if it_animal_choice == "panda rosso":
+            print(panda_it)
+            print()
+            print("Grazie per aver visitato il nostro zoo!")
+            break
+        else:
+          print("Per favore scegli un animale dalla lista")
+    while my_lang_choice[0] == "spanish":
+        span_animal_choice = input("¿Qué animal te gustaría conocer hoy? ").lower()
+        my_animal_choice.append(span_animal_choice)
+        if span_animal_choice == "grizzly":
+            print(bear_span)
+            print()
+            print("¡Gracias por visitar nuestro zoo!")
+            break
+        if span_animal_choice == "leones":
+            print(lion_span)
+            print()
+            print("¡Gracias por visitar nuestro zoo!")
+            break
+        if span_animal_choice == "flamencos del caribe":
+            print(flam_span)
+            print()
+            print("¡Gracias por visitar nuestro zoo!")
+            break
+        if span_animal_choice == "pandas rojos":
+            print(panda_span)
+            print()
+            print("¡Gracias por visitar nuestro zoo!")
+            break
+        else:
+          print("Por favor, elija un animal de la lista. ")
+    while my_lang_choice[0] == "english":
+        eng_animal_choice = input("Which animal would you like to learn about today? ").lower()
+        my_animal_choice.append(eng_animal_choice)
+        if eng_animal_choice == "lion":
+            print(lion_eng)
+            print()
+            print("Thank you for visiting our zoo!")
+            break
+        if eng_animal_choice == "grizzly bear":
+            print(bear_eng)
+            print()
+            print("Thank you for visiting our zoo!")
+            break
+        if eng_animal_choice == "caribbean flamingo":
+            print(flam_eng)
+            print()
+            print("Thank you for visiting our zoo!")
+            break
+        if eng_animal_choice == "red panda":
+            print(panda_eng)
+            print()
+            print("Thank you for visiting our zoo!")
+            break
+        else:
+          print("Please choose an animal from the list. ")
+
+get_info(my_lang_choice)
